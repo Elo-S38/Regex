@@ -28,7 +28,7 @@ const exp4 = /\b(d|l)es?\b/g;
 // presence de e obligatoirement
 // presence en + de s si il y a
 
-console.log(str.match(exp4)); // ['des', 'de', 'de', 'les']
+console.log(str.match(exp4)); 
 console.log(str.match(exp4).length); // 4
 
 /* Etape 4 */
@@ -39,5 +39,5 @@ console.log(str.match(exp5).length); // ça ne compte pas les accents et les car
 /* Etape 5 */
 
 const exp6 = /[^\w\s]/g; //recherche tous ce qui n'est pas ([^]) lettre, chiffre (w) et espace (s)
-console.log(str.match(exp6)); // ["'", "é", "è", "é", ".", "é"]
+console.log(str.match(exp6)); 
 console.log(str.match(exp6).length);
