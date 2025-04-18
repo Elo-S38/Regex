@@ -6,15 +6,27 @@ const str =
 
 const exp = /\bde\b/g; // \b= delimiteur de mot
 const exp1 = /de/g;
+const exp2 = /de/;
 
 console.log(str.match(exp).length);
 console.log(str.match(exp));
-
+console.log(str.match(exp1).length);
 console.log(str.match(exp1));
+console.log(str.match(exp2)); //s'arrete à la premiere correspondance (index 51)
+console.log(str.search(exp2)); // pour trouver directement l'index
 
 /* Etape 2 */
 
-const exp2 = /\b(de|des)\b/g;
+const exp3 = /\b(de|des)\b/g; // avec l'operator "ou"
 
-console.log(str.match(exp2).length);
-console.log(str.match(exp2));
+console.log(str.match(exp3).length);
+console.log(str.match(exp3));
+
+/* Etape 3 */
+const exp = /\b(d|l)es?\b/g;
+// presence de soit d soit l
+// presence de e obligatoirement
+// presence en + de s si il y a
+
+console.log(str.match(exp)); // ['des', 'de', 'de', 'les']
+console.log(str.match(exp).length); // 4
