@@ -32,6 +32,12 @@ console.log(str.match(exp4)); // ['des', 'de', 'de', 'les']
 console.log(str.match(exp4).length); // 4
 
 /* Etape 4 */
-const exp5 = /[a-zA-Z]/g;
+const exp5 = /[a-zA-Z]/g; //presence minuscule et majuscule
 
 console.log(str.match(exp5).length); // ça ne compte pas les accents et les caracteres comme .,espace...
+
+/* Etape 5 */
+
+const exp6 = /[^\w\s]/g; //recherche tous ce qui n'est pas ([^]) lettre, chiffre (w) et espace (s)
+console.log(str.match(exp6)); // ["'", "é", "è", "é", ".", "é"]
+console.log(str.match(exp6).length);
