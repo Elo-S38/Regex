@@ -23,10 +23,15 @@ console.log(str.match(exp3).length);
 console.log(str.match(exp3));
 
 /* Etape 3 */
-const exp = /\b(d|l)es?\b/g;
+const exp4 = /\b(d|l)es?\b/g;
 // presence de soit d soit l
 // presence de e obligatoirement
 // presence en + de s si il y a
 
-console.log(str.match(exp)); // ['des', 'de', 'de', 'les']
-console.log(str.match(exp).length); // 4
+console.log(str.match(exp4)); // ['des', 'de', 'de', 'les']
+console.log(str.match(exp4).length); // 4
+
+/* Etape 4 */
+const exp5 = /[a-zA-Z]/g;
+
+console.log(str.match(exp5).length); // ça ne compte pas les accents et les caracteres comme .,espace...
